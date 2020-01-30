@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h5>Long text</h5>
+    <textarea name="" id="chai" cols="30" rows="10"></textarea>
+
+    <h5>Short text</h5>
+    <input type="text" id="roton">
+    <h4 id="result"></h4>
+</body>
+</html>
+
+<script>
+    var chai   = document.querySelector('#chai');
+    var roton  = document.querySelector('#roton');
+    var result = document.querySelector('#result');
+
+    roton.addEventListener('keypress', function() {
+        var match = chai.value.indexOf(roton.value)
+
+        if(match === -1) {
+            result.innerHTML = `${roton.value} not found`;
+        }
+
+        else {
+            result.innerHTML = `The value ${roton.value} was found at ${match}`;
+        }      
+    });
+</script>
