@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="message">
+    <button id="interact">Interact</button>
+    <div id="answer"></div>
+</body>
+</html>
+
+<script>
+    var msg    = document.querySelector("#message");
+    var btn    = document.querySelector("#interact");
+    var result = document.querySelector("#answer");
+
+    btn.addEventListener("click", function() {
+
+        let c = msg.value.toLowerCase();
+        let r = "";
+
+        if(c.match("hello")) {
+            r = "hello there"
+        }
+
+        else if(c.match("sing for me")) {
+            r = "Ami gaan gai"
+        }
+
+        else if(c.match("tomar nam ki")) {
+            r = "Amr nam khalid"
+        }
+
+        else {
+            r = "Bustesina";
+        }
+        result.innerHTML = r;
+
+        var kotha = new SpeechSynthesisUtterance(r);
+        window.speechSynthesis.speak(kotha);
+    });
+</script>
