@@ -1,0 +1,21 @@
+<script>
+    function genereate(type) {
+        if (type === "plus" || type === "+") {
+            return (a, b) => (a+b);
+        }
+
+        if (type === "minus" || type === "-") {
+            return (a, b) => (a-b);
+        }
+
+        if (type === "multiply" || type === "x") {
+            return (a, b) => (a*b);
+        }
+
+        if (type === "division" || type === "/") {
+            return (a, b) => (a/b);
+        }
+    }
+    var x = genereate('+')
+    console.log(x(4, 4))
+</script>

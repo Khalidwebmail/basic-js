@@ -1,0 +1,12 @@
+<script>
+    var a = {
+        b: 40,
+        c: "Hello world"
+    }
+
+    var d  = Object.create(a);
+    d.b = 90
+    console.log(d.b);
+    console.log(a.b);
+    console.log(d.hasOwnProperty("b"))
+</script>

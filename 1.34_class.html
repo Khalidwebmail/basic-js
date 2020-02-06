@@ -1,0 +1,16 @@
+<script>
+    function Animal(type, life) {
+        this.type = type;
+        this.life = life;
+    }
+
+    class Human extends Animal {
+        constructor(name) {
+            super("mamal", true);
+            this.name = name;
+        }
+    }
+
+    var khalid = new Human("Khalid Ahmed");
+    console.log(khalid);
+</script>
